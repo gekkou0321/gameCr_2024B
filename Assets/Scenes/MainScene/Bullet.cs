@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(moveDirection * bulletSpeed * Time.deltaTime);
 
         // ターゲットに到達した場合、弾を破壊
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(transform.position, targetPosition) < 0.2f)
         {
             Destroy(gameObject);
         }

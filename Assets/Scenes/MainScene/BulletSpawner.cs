@@ -34,7 +34,7 @@ public class BulletSpawner : MonoBehaviour
             float xDistance = Mathf.Abs(transform.position.x - stone.transform.position.x);
 
             // スライダーの値が閾値以上かつ、x座標の距離が4以下の場合に生成
-            if (slider.value >= sliderThreshold && xDistance <= 4)
+            if (slider.value >= sliderThreshold && xDistance <= 4&&this.enabled)
             {
                 // オブジェクトを生成
                 slider.value = slider.value - 0.5f;
