@@ -22,6 +22,11 @@ public class Stone : MonoBehaviour
             DecreaseScore(scoreValue);
             Destroy(gameObject);
         }
+        if (other.CompareTag("Sword"))
+        {
+            IncreaseScore(scoreValue);
+            Destroy(gameObject);
+        }
         else if (other.CompareTag("Bullet"))
         {
             hit++;

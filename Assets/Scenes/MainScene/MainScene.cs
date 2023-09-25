@@ -49,6 +49,8 @@ public class MainScene : MonoBehaviour
         // Rcon オブジェクトから BulletSpawner コンポーネントを取得
         rconBulletSpawner = rconObject.GetComponent<BulletSpawner>();
 
+        GameManager.Instance.ModeChange(0);
+
     }
     private void FixedUpdate()
     {
@@ -78,6 +80,7 @@ public class MainScene : MonoBehaviour
             // Dキーが押されていない場合は Lcon オブジェクトの BulletSpawner を有効にする
             lconBulletSpawner.enabled = true;
         }
+
         
     }
 
